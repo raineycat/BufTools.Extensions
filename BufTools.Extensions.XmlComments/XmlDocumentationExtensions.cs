@@ -95,7 +95,7 @@ namespace BufTools.Extensions.XmlComments
                         if (xmlReader.NodeType == XmlNodeType.Element && xmlReader.Name == "remarks")
                         {
                             var remark = xmlReader.ReadInnerXml();
-                            if (string.IsNullOrWhiteSpace(remark))
+                            if (!string.IsNullOrWhiteSpace(remark))
                                 currentDoc.Remarks.Add(remark);
                         }
                     }
